@@ -45,7 +45,3 @@ This project demonstrates a simple web page with a snow animation effect, a glow
 
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **DaisyUI**: A plugin for Tailwind CSS that provides pre-designed components.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
