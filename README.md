@@ -1,4 +1,4 @@
-# Learn-Snow-Animation
+# Learn Snow Animation
 
 This project demonstrates a simple web page with a snow animation effect, a glowing text effect, and various interactive elements. The page is built using HTML, CSS, and JavaScript, and it includes external libraries such as Tailwind CSS and DaisyUI for styling.
 
