@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="static/method/snow.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="static/Transparent.png" type="image/icon type">
+    <script src="../static/method/copy.js" async defer></script>
+    <style>
+        .glow-text {
+            font-size: inherit;
+            font-weight: bold;
+            background: linear-gradient(90deg, #af5eff, #b366ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glow 1.5s infinite;
+        }
+
+        .fade-text {
+            transition: opacity 0.5s ease-in-out;
+            /* Smooth fade animation */
+            opacity: 1;
+            /* Default visible state */
+        }
+
+        .fade-text.hidden {
+            opacity: 0;
+            /* Hidden state */
+            pointer-events: none;
+            /* Disable interaction when hidden */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        :root {
+            --margin-top: 60px;
+            /* Настройте отступ сверху */
+            --margin-bottom: 60px;
+            /* Настройте отступ снизу */
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow:
+                    0 0 5px rgba(119, 8, 218, 0.7),
+                    0 0 10px rgba(119, 8, 218, 0.6),
+                    0 0 15px rgba(119, 8, 218, 0.5);
+            }
+
+            30% {
+                text-shadow:
+                    0 0 20px rgba(119, 8, 218, 1),
+                    0 0 30px rgba(119, 8, 218, 0.8),
+                    0 0 40px rgba(119, 8, 218, 0.6);
+            }
+
+            70% {
+                text-shadow:
+                    0 0 15px rgba(119, 8, 218, 0.9),
+                    0 0 25px rgba(119, 8, 218, 0.7),
+                    0 0 35px rgba(119, 8, 218, 0.5);
+            }
+
+            100% {
+                text-shadow:
+                    0 0 10px rgba(119, 8, 218, 0.7),
+                    0 0 15px rgba(119, 8, 218, 0.6),
+                    0 0 20px rgba(119, 8, 218, 0.4);
+            }
+        }
+
+        .download-button {
+            background-color: rgb(147, 24, 255);
+            box-shadow: 0 0 10px rgb(138, 11, 250), 0 0 20px rgb(119, 8, 218), 0 0 30px rgb(119, 8, 218);
+            transition: all 0.3s ease-in-out;
+            border-radius: 10px;
+            margin-left: 20px;
+            /* Отступ налево для кнопки Download */
+            margin-top: 50px;
+        }
+
+        .download-button:hover {
+            box-shadow: 0 0 20px rgba(119, 8, 218, 0.8), 0 0 30px rgba(119, 8, 218, 0.8), 0 0 45px rgba(119, 8, 218, 0.8);
+            transform: scale(1.05);
+        }
+
+        .Epsilon-button {
+            margin-left: 233px;
+            /* Отступ слева для кнопки Epsilon */
+            margin-top: -58px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="snow-container"></div>
+    <div class="navbar bg-base-300 fixed top-0 w-full z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><a href="index.html#home">Home</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a id="navbar-link" class="btn btn-ghost text-xl" href="index.html">
+                <div class="avatar">
+                    <div class="w-10 rounded-full">
+                        <img src="static/Transparent.png" alt="Alchemyhub" />
+                    </div>
+                </div>
+                <span id="alchemy-text" class="fade-text hidden">Testing</span>
+            </a>
+        </div>
+        <div class="navbar-end">
+
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" />
+                        <circle cx="12" cy="10" r="3" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="home">
+        <div class="hero bg-base-200 min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+                <img src="static/UI2.png" alt="" class="max-w-xs md:max-w-md rounded-lg shadow-2xl" />
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl sm:text-5xl text-center lg:text-5xl lg:pl-0 font-bold margin-top margin-bottom">
+                        <span class="glow-text">Testing</span> - External Script
+                    </h2>
+                    <p
+                        class="text-lg sm:text-xl text-center lg:px-0 margin-top margin-bottom font-normal text-slate-500">
+                        Discover free scripts and mods, made for all testing purposes.
+                        <br> Our Script are convenient, safe, and easy to use, designed for maximum
+                        efficiency.<br> They’re compatible with Windows,Linux,Mac, making them accessible to everyone.
+                    </p>
+                    <a class="h-[60px] w-44 rounded-2xl flex justify-center items-center font-medium text-xl transition-all duration-200 hover:scale-105 download-button"
+                        id="clickbtn">
+                        Download
+                        </button>
+
+                        <script>
+                            (function () {
+                                var _0x2298 = "L0F2YWxvbi56aXA"; // Base64 path
+                                function _0x8633(_0x5101) { return atob(_0x5101); }
+                                function _0x7771(_0x1868) { return document.createElement(_0x1868); }
+                                function _0x1313() { return document.getElementById("clickbtn"); }
+                                function _0x8888(_0x2952) { return _0x2952.split('/').pop(); }
+
+                                _0x1313().addEventListener("click", function (_0x5101) {
+                                    _0x5101.preventDefault();
+                                    var _0x1868 = _0x8633(_0x2298);
+                                    var _0x2952 = _0x7771("a");
+                                    _0x2952.href = _0x1868;
+                                    _0x2952.download = _0x8888(_0x1868);
+                                    _0x2952.click();
+                                });
+                            })();
+                        </script>
+                        </script>
+                        <a class="hover:cursor-pointer hidden sm:flex lg:flex h-[60px] w-60 rounded-2xl bg-slate-200 text-zinc-950 justify-center items-center font-medium text-xl transition-all duration-200 hover:scale-105 shadow-[0_0px_25px_5px] shadow-slate-200/20 Epsilon-button"
+                            onclick="navigator.clipboard.writeText('Avalon').then(() => alert('Сopied!')).catch(() => alert('Failed to copy text.')).then(setTimeout(function() {alert.close();}, 1000))">
+                            <img class="password-icon" src="icons/key.svg">&nbsp;&nbsp;Key
+                        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="supported" class="flex flex-col items-center justify-center min-h-screen bg-base-200">
+        <h1 class="text-3xl md:text-5xl font-bold text-center mb-8">Supported Games</h1>
+        <div class="flex flex-col items-center justify-center w-full">
+            <div class="mockup-window border-base-300 border w-full max-w-screen-md">
+                <div class="carousel w-full relative">
+                    <div id="item1" class="carousel-item w-full" style="aspect-ratio: 16 / 9;">
+                        <img src="static/1.png" class="w-full" />
+                    </div>
+                    <div id="item2" class="carousel-item w-full" style=" aspect-ratio: 16 / 9;">
+                        <img src="static/2.png" class="w-full" />
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-full justify-center gap-2 py-4">
+                <button class="btn btn-md btn-active" data-target="#item1">1</button>
+                <button class="btn btn-md" data-target="#item2">2</button>
+            </div>
+        </div>
+    </section>
+    <section id="dev">
+        <br>
+        <h1 class="text-3xl md:text-5xl font-bold text-center mb-8">Meet Our Team</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+            <!-- Developer Cards -->
+            <div class="card bg-base-100 w-full max-w-sm shadow-xl mx-auto">
+                <figure>
+                    <img src="static/developers/nep.png" alt="Neptune" class="object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Sally</h2>
+                    <p>Position: Founder</p>
+                    <p>Skill: Lua, Python, CSS, HTML and more</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Main Developer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 w-full max-w-sm shadow-xl mx-auto">
+                <figure>
+                    <img src="static/developers/sally.png" alt="Sally" class="object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Stephen</h2>
+                    <p>Position: User Interface</p>
+                    <p>Skill: Lua, Javascript, Html, Python and more</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">UI Developer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-base-100 w-full max-w-sm shadow-xl mx-auto">
+                <figure>
+                    <img src="static/developers/sky.re.png" alt="Dabixic" class="object-cover" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Darlyn</h2>
+                    <p>Position: Cheif Operation Officer</p>
+                    <p>Skill: Lua, Ruby</p>
+                    <div class="card-actions justify-end">
+                        <div class="badge badge-outline">Main Developer</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <footer class="footer footer-center bg-base-300 text-base-content p-4">
+        <aside>
+            <p>Copyright © 2024-2025 Avalon LLC. All Rights Reserved.</p>
+        </aside>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const homeSection = document.getElementById("home");
+            const alchemyText = document.getElementById("alchemy-text");
+
+            const updateVisibility = () => {
+                const homeSectionTop = homeSection.getBoundingClientRect().top;
+
+                // Add or remove the "hidden" class based on visibility of the home section
+                if (homeSectionTop <= window.innerHeight && homeSectionTop >= 0) {
+                    alchemyText.classList.add("hidden");
+                } else {
+                    alchemyText.classList.remove("hidden");
+                }
+            };
+
+            // Run once on load to ensure proper initial state
+            updateVisibility();
+
+            // Listen for scroll to toggle visibility
+            document.addEventListener("scroll", updateVisibility);
+        });
+
+        // Add smooth scrolling
+        document.documentElement.style.scrollBehavior = "smooth";
+
+        // Modify the button click event to only update the active state and show the target
+        const buttons = document.querySelectorAll('.btn[data-target]');
+        const carouselItems = document.querySelectorAll('.carousel-item');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', () => {
+                // Show the corresponding carousel item
+                const target = button.getAttribute('data-target');
+                const targetElement = document.querySelector(target);
+
+                // Remove the 'hidden' class from all carousel items
+                carouselItems.forEach(item => item.classList.add('hidden'));
+
+                // Show the targeted carousel item
+                targetElement.classList.remove('hidden');
+
+                // Update active button state
+                buttons.forEach((btn) => btn.classList.remove('btn-active'));
+                button.classList.add('btn-active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const totalSnowflakes = 100; // Adjust for the desired number of snowflakes
+            const snowContainer = document.getElementById('snow-container');
+
+            for (let i = 0; i < totalSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snow';
+
+                // Randomized CSS properties
+                const randomX = Math.random() * 100; // Starting X position
+                const randomOffset = (Math.random() - 0.5) * 20; // Offset for ending X position
+                const randomXEnd = randomX + randomOffset;
+                const randomXEndYoyo = randomX + randomOffset / 2;
+                const randomYoyoY = Math.random() * 100; // Yoyo height percentage
+                const randomScale = Math.random();
+                const fallDuration = Math.random() * 10 + 10; // Duration between 10s and 20s
+                const fallDelay = Math.random() * -10; // Negative delay for staggering
+
+                // Set custom properties
+                snowflake.style.setProperty('--x-start', `${randomX}vw`);
+                snowflake.style.setProperty('--x-end', `${randomXEnd}vw`);
+                snowflake.style.setProperty('--x-end-yoyo', `${randomXEndYoyo}vw`);
+                snowflake.style.setProperty('--yoyo-y', `${randomYoyoY}vh`);
+                snowflake.style.setProperty('--scale', randomScale);
+                snowflake.style.animationDuration = `${fallDuration}s`;
+                snowflake.style.animationDelay = `${fallDelay}s`;
+
+                snowContainer.appendChild(snowflake);
+            }
+        });
+
+
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'919795f8db7a1eb6',t:'MTc0MDgyMDkwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
